@@ -7,7 +7,7 @@
     <ProjectGuid>{F4AA954B-5266-4AE6-91F4-79522DBC3DA0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>e_shop_change</RootNamespace>
-    <AssemblyName>e-shop change</AssemblyName>
+    <AssemblyName>e-shopchange</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -25,12 +25,12 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://tools.idle.gr/eshopchange/</InstallUrl>
-    <ProductName>Ρέστα</ProductName>
+    <ProductName>Change</ProductName>
     <PublisherName>d3sync</PublisherName>
     <SuiteName>e-shop Tools</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
