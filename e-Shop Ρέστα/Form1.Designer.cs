@@ -84,11 +84,15 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.τροποποίησηToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.διαγραφήToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -157,6 +161,7 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
@@ -682,6 +687,28 @@
             this.textBox3.TabIndex = 0;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.τροποποίησηToolStripMenuItem,
+            this.διαγραφήToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            // 
+            // τροποποίησηToolStripMenuItem
+            // 
+            this.τροποποίησηToolStripMenuItem.Name = "τροποποίησηToolStripMenuItem";
+            this.τροποποίησηToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.τροποποίησηToolStripMenuItem.Text = "Τροποποίηση";
+            this.τροποποίησηToolStripMenuItem.Click += new System.EventHandler(this.τροποποίησηToolStripMenuItem_Click);
+            // 
+            // διαγραφήToolStripMenuItem
+            // 
+            this.διαγραφήToolStripMenuItem.Name = "διαγραφήToolStripMenuItem";
+            this.διαγραφήToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.διαγραφήToolStripMenuItem.Text = "Διαγραφή";
+            this.διαγραφήToolStripMenuItem.Click += new System.EventHandler(this.διαγραφήToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -703,6 +730,7 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -763,6 +791,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem τροποποίησηToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem διαγραφήToolStripMenuItem;
     }
 }
 

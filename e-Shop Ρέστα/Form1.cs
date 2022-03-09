@@ -164,6 +164,49 @@ namespace e_shop_change
             }
         }
 
+        private void τροποποίησηToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems != null)
+            {
+                //MessageBox.Show(listView1.SelectedItems[0].SubItems[1].Text);
+                textBox1.Text = listView1.SelectedItems[0].SubItems[1].Text;
+                textBox2.Text = listView1.SelectedItems[0].SubItems[2].Text;
+                var cashlb = listView1.SelectedItems[0].SubItems[4].Text;
+                c500 = Convert.ToInt32(cashlb.Substring(0, 1));
+                c200 = Convert.ToInt32(cashlb.Substring(1, 1));
+                c100 = Convert.ToInt32(cashlb.Substring(2, 1));
+                c50 = Convert.ToInt32(cashlb.Substring(3, 1));
+                c20 = Convert.ToInt32(cashlb.Substring(4, 1));
+                c10 = Convert.ToInt32(cashlb.Substring(5, 1));
+                c5 = Convert.ToInt32(cashlb.Substring(6, 1));
+                c2 = Convert.ToInt32(cashlb.Substring(7, 1));
+                c1 = Convert.ToInt32(cashlb.Substring(8, 1));
+                c050 = Convert.ToInt32(cashlb.Substring(9, 1));
+                c020 = Convert.ToInt32(cashlb.Substring(10, 1));
+                c010 = Convert.ToInt32(cashlb.Substring(11, 1));
+                c005 = Convert.ToInt32(cashlb.Substring(12, 1));
+                c002 = Convert.ToInt32(cashlb.Substring(13, 1));
+                c001 = Convert.ToInt32(cashlb.Substring(14, 1));
+                SetLabels(); SetCalcLabels();
+                sum_m -= Convert.ToDouble(listView1.SelectedItems[0].SubItems[1].Text);
+                sum_k -= Convert.ToDouble(listView1.SelectedItems[0].SubItems[2].Text);
+                editOn = true;
+            }
+        }
+
+        private void διαγραφήToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems != null)
+            {
+                //MessageBox.Show(listView1.SelectedItems[0].SubItems[1].Text);
+                sum_m -= Convert.ToDouble(listView1.SelectedItems[0].SubItems[1].Text);
+                sum_k -= Convert.ToDouble(listView1.SelectedItems[0].SubItems[2].Text);
+                listView1.SelectedItems[0].Remove();
+                SetLabels(); SetCalcLabels();
+
+            }
+        }
+
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (listView1.SelectedItems != null)
@@ -355,8 +398,8 @@ namespace e_shop_change
                         }
                         else
                         {
-                            listView1.SelectedItems[0].SubItems[1].Text = textBox1.Text;
-                            listView1.SelectedItems[0].SubItems[2].Text = textBox2.Text;
+                            listView1.SelectedItems[0].SubItems[1].Text = textBox1.Text.Replace('.', ',');
+                            listView1.SelectedItems[0].SubItems[2].Text = textBox2.Text.Replace('.', ',');
                             listView1.SelectedItems[0].SubItems[3].Text = Math.Round(value3, 2).ToString();
                             listView1.SelectedItems[0].SubItems[4].Text = cashlb;
                             listView1.SelectedIndices.Clear();
